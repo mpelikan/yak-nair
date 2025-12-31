@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yak Nair - Task-Free, Carefree Coding</title>
+    <meta name="description" content="The #1 developer-trusted solution for removing unwanted prerequisite tasks. Stop shaving. Start shipping.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yaknair.com/">
+    <meta property="og:title" content="Yak Nair - Task-Free, Carefree Coding">
+    <meta property="og:description" content="The #1 developer-trusted solution for removing unwanted prerequisite tasks. Stop shaving. Start shipping.">
+    <meta property="og:image" content="https://yaknair.com/social-preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yak Nair - Task-Free, Carefree Coding">
+    <meta name="twitter:description" content="The #1 developer-trusted solution for removing unwanted prerequisite tasks. Stop shaving. Start shipping.">
+    <meta name="twitter:image" content="https://yaknair.com/social-preview.png">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         * {
@@ -66,7 +81,7 @@
         .hero-heading::after {
             content: '';
             width: 80px;
-            height: 2px;
+            height: 4px;
             background: linear-gradient(90deg, transparent, #1a237e);
         }
 
@@ -369,6 +384,15 @@
         .warning-box h3 {
             color: #e65100;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .warning-box h3::before,
+        .warning-box h3::after {
+            content: '⚠️';
         }
 
         .warning-box p {
@@ -432,7 +456,9 @@
     <section class="hero">
         <img src="yaknair.png" alt="Yak Nair">
         <p class="tagline">Task-Free, Carefree Coding</p>
-        <p class="subtagline">The #1 developer-trusted solution for removing unwanted prerequisite tasks. Dissolves yak shaving so you can get back to what matters.</p>
+        <p class="subtagline">
+            The #1 developer-trusted solution for removing unwanted prerequisite tasks. Eliminates yak shaving so you can get back to what matters.
+        </p>
         <h2 class="hero-heading">Ship Features Faster</h2>
         <a href="https://en.wiktionary.org/wiki/yak_shaving" class="hero-cta" target="_blank" rel="noopener">Learn About Yak Shaving</a>
     </section>
@@ -569,16 +595,18 @@
     <!-- Warning Section -->
     <section class="warning">
         <div class="warning-box">
-            <h3>⚠️ Important Safety Information ⚠️</h3>
+            <h3>Important Safety Information</h3>
             <p>
-                <span class="nowrap">Do not use Yak Nair on tasks that are actually important.</span>
+                <span class="nowrap">Do not use Yak Nair on tasks</span>
+                <span class="nowrap">that are actually important.</span>
                 <span class="nowrap">Side effects may include:</span>
                 <span class="nowrap">shipping too fast,</span>
                 <span class="nowrap">mass merge conflicts,</span>
                 <span class="nowrap">and the uncomfortable realization</span>
                 <span class="nowrap">that some yaks needed shaving after all.</span>
                 <br>
-                <span class="nowrap">If you experience sudden productivity lasting more than 4 sprints,</span>
+                <span class="nowrap">If you experience sudden productivity</span>
+                <span class="nowrap">lasting more than 4 sprints,</span>
                 <span class="nowrap">consult your engineering manager.</span>
                 <span class="nowrap">Keep away from project managers</span>
                 <span class="nowrap">— may cause unrealistic expectations.</span>

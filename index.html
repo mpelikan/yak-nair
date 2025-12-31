@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yak Nair - Task-Free, Carefree Coding</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 50%, #f5f5f5 100%);
+            color: #333;
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero img {
+            max-width: 400px;
+            width: 90%;
+            margin-bottom: 30px;
+        }
+
+        .tagline {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a237e;
+        }
+
+        .subtagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-heading {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #1a237e;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-heading::before,
+        .hero-heading::after {
+            content: '';
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #1a237e);
+        }
+
+        .hero-heading::after {
+            background: linear-gradient(90deg, #1a237e, transparent);
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .hero-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.4);
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #f5f5f5;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .problem h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .problem-scenario {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .problem-scenario .task {
+            color: #666;
+        }
+
+        .problem-scenario .arrow {
+            color: #e91e63;
+            margin: 0 10px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            padding: 30px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+        }
+
+        .benefit-card h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            color: #555;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: #1a237e;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #e91e63;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 60px 20px;
+            text-align: center;
+            background: #fce4ec;
+        }
+
+        .products h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card h3 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .product-card .subtitle {
+            color: #e91e63;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-card ul {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-card li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .product-card li::before {
+            content: "✓";
+            color: #e91e63;
+            position: absolute;
+            left: 0;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #1a237e;
+            font-weight: bold;
+        }
+
+        .product-price span {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 20px;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px 30px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #e91e63;
+            opacity: 0.2;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #1a237e;
+        }
+
+        .testimonial .role {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Warning Section */
+        .warning {
+            background: #fff3e0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .warning-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px dashed #ff9800;
+            border-radius: 10px;
+        }
+
+        .warning-box h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+
+        .warning-box p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a237e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        footer .disclaimer {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        footer a {
+            color: #f8bbd9;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #e91e63;
+            text-decoration: underline;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .tagline {
+                font-size: 1.4rem;
+            }
+
+            .problem-scenario {
+                font-size: 0.85rem;
+            }
+
+            h2 {
+                font-size: 1.6rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="yaknair.png" alt="Yak Nair">
+        <p class="tagline">Task-Free, Carefree Coding</p>
+        <p class="subtagline">The #1 developer-trusted solution for removing unwanted prerequisite tasks. Dissolves yak shaving so you can get back to what matters.</p>
+        <h2 class="hero-heading">Ship Features Faster</h2>
+        <a href="https://en.wiktionary.org/wiki/yak_shaving" class="hero-cta" target="_blank" rel="noopener">Learn About Yak Shaving</a>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <h2>Sound Familiar?</h2>
+        <div class="problem-scenario">
+            <p><span class="task">"I just need to add a button..."</span></p>
+            <p><span class="arrow">→</span> but first I need to update the component library</p>
+            <p><span class="arrow">→</span> but first I need to upgrade Node</p>
+            <p><span class="arrow">→</span> but first I need to install nvm</p>
+            <p><span class="arrow">→</span> but first I need to fix my shell config</p>
+            <p><span class="arrow">→</span> but first I need to update my dotfiles repo</p>
+            <p><span class="arrow">→</span> but first I need to renew my SSH keys</p>
+            <p><span class="arrow">→</span> but first I need to remember my GPG passphrase</p>
+            <p><span class="arrow">→</span> but first...</p>
+            <br>
+            <p style="color: #e91e63; font-weight: bold;">Stop shaving. Start shipping.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Why Developers Love Yak Nair</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Works in Minutes</h3>
+                <p>Our patented TaskDissolve™ formula breaks down even the most stubborn dependency chains in under 3 minutes.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Targets Root Tasks</h3>
+                <p>Goes beneath the surface to eliminate tasks you didn't even know were blocking you. Reaches deep into your backlog.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🧴</div>
+                <h3>Gentle Formula</h3>
+                <p>Won't irritate your codebase. Safe for use on legacy systems, monorepos, and even that jQuery project from 2012.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">✨</div>
+                <h3>Smooth Results</h3>
+                <p>Leaves your workflow feeling silky smooth. Results last up to 2 sprints longer than manual yak shaving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Apply</h3>
+                <p>Identify your yak. Apply Yak Nair liberally to affected areas of your task list.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Wait</h3>
+                <p>Let our TaskDissolve™ technology break down the causal chains binding your prerequisites.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Wipe Away</h3>
+                <p>Simply wipe away dissolved tasks. Watch as blockers disappear, revealing the smooth workflow underneath.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Find Your Formula</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>Yak Nair Original</h3>
+                <p class="subtitle">For Everyday Yak Shaving</p>
+                <ul>
+                    <li>Standard dependency resolution</li>
+                    <li>Config file untangling</li>
+                    <li>Basic environment setup</li>
+                    <li>README-guided application</li>
+                </ul>
+                <p class="product-price">$29.99 <span>/ sprint</span></p>
+            </div>
+            <div class="product-card">
+                <h3>Yak Nair Sensitive</h3>
+                <p class="subtitle">For Legacy Codebases</p>
+                <ul>
+                    <li>Gentle on deprecated APIs</li>
+                    <li>Won't break brittle tests</li>
+                    <li>Respects tribal knowledge</li>
+                    <li>Extra soothing for tech debt</li>
+                </ul>
+                <p class="product-price">$49.99 <span>/ sprint</span></p>
+            </div>
+            <div class="product-card">
+                <h3>Yak Nair MAX</h3>
+                <p class="subtitle">For Coarse Infrastructure</p>
+                <ul>
+                    <li>Kubernetes cluster untangling</li>
+                    <li>Multi-cloud dependency dissolution</li>
+                    <li>Terraform state reconciliation</li>
+                    <li>Pipeline blockage removal</li>
+                </ul>
+                <p class="product-price">$99.99 <span>/ sprint</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Real Results from Real Developers</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>I used to spend 4 hours setting up my environment before writing a single line of code. Now? I just apply Yak Nair and I'm shipping features by lunch.</p>
+                <p class="author">Sarah K.</p>
+                <p class="role">Senior Frontend Engineer</p>
+            </div>
+            <div class="testimonial">
+                <p>My team was drowning in prerequisite tasks. Yak Nair dissolved our entire blocked backlog. Our velocity increased 300%. My manager cried.</p>
+                <p class="author">Marcus T.</p>
+                <p class="role">Tech Lead, Fortune 500</p>
+            </div>
+            <div class="testimonial">
+                <p>I was mass years deep in a yak shaving rabbit hole. Docker configs, SSL certs, DNS propagation... One application of Yak Nair MAX and I finally deployed to production.</p>
+                <p class="author">DevOps Dana</p>
+                <p class="role">Site Reliability Engineer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Section -->
+    <section class="warning">
+        <div class="warning-box">
+            <h3>⚠️ Important Safety Information ⚠️</h3>
+            <p>
+                <span class="nowrap">Do not use Yak Nair on tasks that are actually important.</span>
+                <span class="nowrap">Side effects may include:</span>
+                <span class="nowrap">shipping too fast,</span>
+                <span class="nowrap">mass merge conflicts,</span>
+                <span class="nowrap">and the uncomfortable realization</span>
+                <span class="nowrap">that some yaks needed shaving after all.</span>
+                <br>
+                <span class="nowrap">If you experience sudden productivity lasting more than 4 sprints,</span>
+                <span class="nowrap">consult your engineering manager.</span>
+                <span class="nowrap">Keep away from project managers</span>
+                <span class="nowrap">— may cause unrealistic expectations.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Yak Nair™ — Smooth Workflows for Every Developer</p>
+        <p>Questions? Contact us at <strong>help@totally-not-a-real-product.dev</strong></p>
+        <p class="disclaimer">
+            <span class="nowrap">This is a parody website.</span>
+            <span class="nowrap">Yak Nair is not a real product.</span>
+            <span class="nowrap">No actual <a href="https://www.google.com/search?q=yak&tbm=isch" target="_blank" rel="noopener">yaks</a> were shaved in the making of this website.</span>
+            <br>
+            <span class="nowrap">"Yak Shaving" is a term coined by <a href="https://www.linkedin.com/in/carlin-vieri-9a193" target="_blank" rel="noopener">Carlin Vieri</a>, </span>
+            <span class="nowrap">inspired by <a href="https://en.wikipedia.org/wiki/The_Ren_%26_Stimpy_Show" target="_blank" rel="noopener">Ren & Stimpy</a>.</span>
+            <br>
+            <span class="nowrap"><a href="https://naircare.com/" target="_blank" rel="noopener">Nair®</a> is a registered trademark of <a href="https://churchdwight.com/" target="_blank" rel="noopener">Church & Dwight Co., Inc.</a></span>
+            <span class="nowrap">This site is not affiliated with or endorsed by the makers of Nair® hair removal products.</span>
+            <br>
+            <span class="nowrap">If you're still reading this, you're probably <a href="https://theuselessweb.com/" target="_blank" rel="noopener">procrastinating</a>.</span>
+            <span class="nowrap">That's a form of yak shaving.</span>
+            <span class="nowrap">Go ship something.</span>
+        </p>
+    </footer>
+</body>
+</html>

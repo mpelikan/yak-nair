@@ -30,7 +30,7 @@ aws sso login --profile jaby
 ### Deploy Commands
 ```bash
 # Sync to S3 (exclude non-web files)
-AWS_PROFILE=jaby aws s3 sync . s3://yaknair.com --exclude ".git/*" --exclude ".DS_Store" --exclude ".gitignore" --exclude ".claude/*" --exclude "favicon_io/*" --exclude "README.md" --exclude "CLAUDE.md" --exclude "bottle-original.png"
+AWS_PROFILE=jaby aws s3 sync . s3://yaknair.com --exclude ".git/*" --exclude ".DS_Store" --exclude ".gitignore" --exclude ".claude/*" --exclude "README.md" --exclude "CLAUDE.md" --exclude "bottle-original.png" --exclude "social-preview.svg"
 
 # Invalidate CloudFront cache
 AWS_PROFILE=jaby aws cloudfront create-invalidation --distribution-id E1HJMFXZVS8RHH --paths "/*"

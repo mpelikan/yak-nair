@@ -308,18 +308,19 @@
 			color: #555;
 		}
 
-		.benefit-icon {
-			font-size: 2rem;
-			margin-bottom: 15px;
+		.circle-icon {
 			width: 60px;
 			height: 60px;
-			background: #1a237e;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-left: auto;
-			margin-right: auto;
+		}
+
+		.benefit-icon {
+			font-size: 2rem;
+			margin: 0 auto 15px;
+			background: #1a237e;
 		}
 
 		/* How It Works */
@@ -351,16 +352,10 @@
 		}
 
 		.step-number {
-			width: 60px;
-			height: 60px;
-			background: #e91e63;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			font-size: 1.5rem;
 			font-weight: bold;
 			margin: 0 auto 20px;
+			background: #e91e63;
 		}
 
 		.step h3 {
@@ -634,26 +629,15 @@
 			margin-bottom: 10px;
 		}
 
-		footer .disclaimer {
+		footer .footer-note {
 			font-size: 0.75rem;
-			opacity: 0.6;
 			max-width: 600px;
 			margin: 20px auto 0;
 		}
 
-		footer .dedication {
-			font-size: 0.75rem;
-			opacity: 0.5;
-			max-width: 600px;
-			margin: 20px auto 0;
-		}
-
-		footer .copyright {
-			font-size: 0.75rem;
-			opacity: 0.75;
-			max-width: 600px;
-			margin: 20px auto 0;
-		}
+		footer .disclaimer { opacity: 0.6; }
+		footer .dedication { opacity: 0.5; }
+		footer .copyright { opacity: 0.75; }
 
 		footer a {
 			color: inherit;
@@ -807,28 +791,28 @@
 		<h2>Why Developers Love Yak Nair</h2>
 		<div class="benefits-grid">
 			<div class="benefit-card">
-				<div class="benefit-icon" aria-hidden="true">⚡</div>
+				<div class="circle-icon benefit-icon" aria-hidden="true">⚡</div>
 				<h3>Works in Minutes</h3>
 				<p>
 					Our patented TaskDissolve&trade; formula breaks down even the most stubborn dependency chains in under 3 minutes.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon" aria-hidden="true">🎯</div>
+				<div class="circle-icon benefit-icon" aria-hidden="true">🎯</div>
 				<h3>Targets Root Tasks</h3>
 				<p>
 					Goes beneath the surface to eliminate tasks you didn't even know were blocking you. Reaches deep into your backlog.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon" aria-hidden="true">🧴</div>
+				<div class="circle-icon benefit-icon" aria-hidden="true">🧴</div>
 				<h3>Gentle Formula</h3>
 				<p>
 					Won't irritate your codebase. Safe for use on legacy systems, monorepos, and even that jQuery project from 2012.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon" aria-hidden="true">✨</div>
+				<div class="circle-icon benefit-icon" aria-hidden="true">✨</div>
 				<h3>Smooth Results</h3>
 				<p>
 					Leaves your workflow feeling silky smooth. Results last up to 2 sprints longer than manual yak shaving.
@@ -842,21 +826,21 @@
 		<h2>How It Works</h2>
 		<div class="steps">
 			<div class="step">
-				<div class="step-number">1</div>
+				<div class="circle-icon step-number">1</div>
 				<h3>Apply</h3>
 				<p>
 					Identify your yak. Apply Yak Nair liberally to affected areas of your task list.
 				</p>
 			</div>
 			<div class="step">
-				<div class="step-number">2</div>
+				<div class="circle-icon step-number">2</div>
 				<h3>Wait</h3>
 				<p>
 					Let our TaskDissolve&trade; technology break down the causal chains binding your prerequisites.
 				</p>
 			</div>
 			<div class="step">
-				<div class="step-number">3</div>
+				<div class="circle-icon step-number">3</div>
 				<h3>Wipe Away</h3>
 				<p>
 					Simply wipe away dissolved tasks. Watch as blockers disappear, revealing the smooth workflow underneath.
@@ -983,7 +967,7 @@
 			Questions? Contact us at
 			<strong><span class="nowrap">help@totally-not-a-real-product.dev</span></strong>
 		</p>
-		<p class="disclaimer">
+		<p class="footer-note disclaimer">
 			<span class="nowrap">This is a parody website.</span>
 			<span class="nowrap">Yak Nair is not a real product.</span>
 			<span class="nowrap">No actual <a href="https://www.google.com/search?q=yak&tbm=isch" target="_blank" rel="noopener">yaks</a> were shaved in the making of this website.</span>
@@ -1003,8 +987,8 @@
 			<span class="nowrap">That's a form of yak shaving.</span>
 			<span class="nowrap">Go ship something.</span>
 		</p>
-		<p class="dedication">Dedicated to the memory of Steven Pelikan.</p>
-		<p class="copyright">&copy; 2026 Yak Nair Industries. All rights reserved.</p>
+		<p class="footer-note dedication">Dedicated to the memory of Steven Pelikan.</p>
+		<p class="footer-note copyright">&copy; 2026 Yak Nair Industries. All rights reserved.</p>
 	</footer>
 
 	<script>

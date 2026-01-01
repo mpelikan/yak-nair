@@ -199,6 +199,37 @@
             50% { opacity: 0; }
         }
 
+        /* Status Badges */
+        .status-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        .badge {
+            display: inline-flex;
+            font-family: 'Verdana', sans-serif;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        }
+
+        .badge-label {
+            background: #555;
+            color: #fff;
+            padding: 5px 8px;
+        }
+
+        .badge-value {
+            background: #4c1;
+            color: #fff;
+            padding: 5px 8px;
+        }
+
         /* Benefits Section */
         .benefits {
             padding: 60px 20px;
@@ -668,6 +699,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Status Badges -->
+    <div class="status-badges">
+        <div class="badge">
+            <span class="badge-label">build</span>
+            <span class="badge-value">yak-free</span>
+        </div>
+        <div class="badge">
+            <span class="badge-label">yaks shaved</span>
+            <span class="badge-value">0</span>
+        </div>
+        <div class="badge">
+            <span class="badge-label">dependencies</span>
+            <span class="badge-value">dissolved</span>
+        </div>
+        <div class="badge">
+            <span class="badge-label">velocity</span>
+            <span class="badge-value">+300%</span>
+        </div>
+    </div>
 
     <!-- Benefits Section -->
     <section class="benefits">

@@ -70,7 +70,7 @@ AWS_PROFILE=jaby aws cloudfront create-invalidation --distribution-id E1HJMFXZVS
 - `index.html` - Main page with all HTML and embedded CSS
 - `yaknair.png` - Logo (823 x 288)
 - `bottle.png` - Product image, optimized (600 x 900)
-- `bottle-original.png` - Original product image (gitignored)
+- `bottle-original.png` - Original product image (excluded from S3 deploy)
 - `social-preview.png` - Open Graph image
 
 ## Notes

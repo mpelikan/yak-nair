@@ -2,7 +2,7 @@
   <img src="yaknair.png" alt="Yak Nair" width="400">
 </p>
 
-<p align="center"><strong>Task-Free, Carefree Coding</strong></p>
+<p align="center"><strong>Stop Shaving. Start Shipping.</strong></p>
 
 A parody product landing page for "Yak Nair" — a fake product that dissolves [yak shaving](https://en.wiktionary.org/wiki/yak_shaving) tasks so developers can ship features faster.
 

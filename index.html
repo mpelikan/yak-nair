@@ -39,6 +39,22 @@
 			line-height: 1.6;
 		}
 
+		/* Skip Link */
+		.skip-link {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			background: #1a237e;
+			color: white;
+			padding: 8px 16px;
+			z-index: 1000;
+			text-decoration: none;
+		}
+
+		.skip-link:focus {
+			top: 0;
+		}
+
 		/* Hero Section */
 		.hero {
 			background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 50%, #f5f5f5 100%);
@@ -95,6 +111,10 @@
 
 		.hero-heading::after {
 			background: linear-gradient(90deg, #e91e63, transparent);
+		}
+
+		.hero-heading del {
+			margin: 0 -0.35em;
 		}
 
 		.hero-cta {
@@ -715,30 +735,34 @@
 	</style>
 </head>
 <body>
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+
 	<!-- Hero Section -->
-	<section class="hero">
+	<header class="hero" role="banner">
 		<!-- Corner Ribbon -->
-		<div class="corner-ribbon"><span>DevOps Approved!</span></div>
+		<div class="corner-ribbon" aria-hidden="true"><span>DevOps Approved!</span></div>
 		<img src="yaknair.png" alt="Yak Nair">
-		<p class="tagline">Stop Shaving. Start Shipping.</p>
+		<h1 class="tagline">Stop Shaving. Start Shipping.</h1>
 		<p class="subtagline">
 			The #1 developer-trusted solution for removing unwanted prerequisite tasks. Eliminates yak shaving so you can get back to what matters.
 		</p>
-		<h2 class="hero-heading">Ship Features Faster</h2>
+		<h2 class="hero-heading">Ship <del>Bugs</del> Features Faster</h2>
 		<a href="https://en.wiktionary.org/wiki/yak_shaving" class="hero-cta" target="_blank" rel="noopener">Learn About Yak Shaving</a>
-	</section>
+	</header>
+
+	<main id="main-content">
 
 	<!-- Problem Section -->
 	<section class="problem">
 		<h2>Sound Familiar?</h2>
-		<div class="problem-scenario">
-			<div class="terminal-header">
+		<div class="problem-scenario" role="img" aria-label="Terminal showing a chain of prerequisite tasks: I just need to add a button, but first I need to update the component library, upgrade Node, install nvm, fix my shell config, update my dotfiles repo, renew my SSH keys, remember my GPG passphrase, and so on. Stop shaving. Start shipping.">
+			<div class="terminal-header" aria-hidden="true">
 				<div class="terminal-dot red"></div>
 				<div class="terminal-dot yellow"></div>
 				<div class="terminal-dot green"></div>
 				<span class="terminal-title">developer@brain ~ % </span>
 			</div>
-			<div class="terminal-body">
+			<div class="terminal-body" aria-hidden="true">
 				<p><span class="task">"I just need to add a button..."</span></p>
 				<p><span class="arrow">→</span> but first I need to update the component library</p>
 				<p><span class="arrow">→</span> but first I need to upgrade Node</p>
@@ -772,8 +796,8 @@
 			<span class="badge-label">velocity</span>
 			<span class="badge-value">+300%</span>
 		</div>
-		<a href="https://github.com/mpelikan/yak-nair" target="_blank" rel="noopener" class="badge badge-link">
-			<span class="badge-label"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</span>
+		<a href="https://github.com/mpelikan/yak-nair" target="_blank" rel="noopener" class="badge badge-link" aria-label="View source code on GitHub">
+			<span class="badge-label"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</span>
 			<span class="badge-value">view source</span>
 		</a>
 	</div>
@@ -783,28 +807,28 @@
 		<h2>Why Developers Love Yak Nair</h2>
 		<div class="benefits-grid">
 			<div class="benefit-card">
-				<div class="benefit-icon">⚡</div>
+				<div class="benefit-icon" aria-hidden="true">⚡</div>
 				<h3>Works in Minutes</h3>
 				<p>
 					Our patented TaskDissolve&trade; formula breaks down even the most stubborn dependency chains in under 3 minutes.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon">🎯</div>
+				<div class="benefit-icon" aria-hidden="true">🎯</div>
 				<h3>Targets Root Tasks</h3>
 				<p>
 					Goes beneath the surface to eliminate tasks you didn't even know were blocking you. Reaches deep into your backlog.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon">🧴</div>
+				<div class="benefit-icon" aria-hidden="true">🧴</div>
 				<h3>Gentle Formula</h3>
 				<p>
 					Won't irritate your codebase. Safe for use on legacy systems, monorepos, and even that jQuery project from 2012.
 				</p>
 			</div>
 			<div class="benefit-card">
-				<div class="benefit-icon">✨</div>
+				<div class="benefit-icon" aria-hidden="true">✨</div>
 				<h3>Smooth Results</h3>
 				<p>
 					Leaves your workflow feeling silky smooth. Results last up to 2 sprints longer than manual yak shaving.
@@ -946,9 +970,11 @@
 		</div>
 	</section>
 
+	</main>
+
 	<!-- Footer -->
-	<footer>
-		<img src="yaknair.png" alt="Yak Nair" class="footer-logo">
+	<footer role="contentinfo">
+		<img src="yaknair.png" alt="" class="footer-logo" aria-hidden="true">
 		<p>
 			<span class="nowrap">Yak Nair&trade;</span> &mdash;
 			<span class="nowrap">Smooth Workflows for Every Developer</span>
